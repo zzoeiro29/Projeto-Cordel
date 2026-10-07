@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Passion+One:wght@400;700;900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&family=Passion+One:wght@400;700;900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    /* nome variavel: conteudo*/
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2:  "Passion One", sans-serif;
+    --fonte3: "Arimo", sans-serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    min-height: 100%;
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: var(--fonte2);
+}
+
+header > h1{
+    padding-top: 50px;
+    /*text-transform: uppercase;  deixa todas as letras maiuscula */
+    font-variant: small-caps; /* deixa todas as letras maiuscula, mas as primeiras letras sao maiores */
+    font-size: 10vw;  /* vw é de view port, reduz ou aumenta o tamanho neste caso da letra dependo da resoluçao da tela */
+}
+
+header > p{
+    padding-bottom: 50px;
+}
+
+header a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+
+}
+
+header a:hover , footer a:hover{
+    text-decoration: underline;
+}
+
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding: 120px;
+    line-height: 2em;
+    font-family: var(--fonte3);
+    font-size: clamp(20px, 3.5vw, 25px); /* 16px tamanho mínimo, 3.5vw tamanho que acompanha a tela , 40px o maximo*/
+    font-weight: bold;
+    
+    
+}
+
+section > p{
+    padding-bottom: 1em;
+}
+
+#img01{
+    background-image: url("../imagens/background001.jpg");
+    background-position: right center;
+}
+
+#img02{
+    background-image: url("../imagens/background002.jpg");
+}
+
+.normal{
+    background-color: white;
+    color: black;
+
+}
+
+.imagem{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.322);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.466);
+    background-size: cover;
+    background: fixed; /* efeito paralax (fica no fundo) */
+} 
+
+.imagem > p{
+    background: rgba(0, 0, 0, 0.253);
+    display: inline-block;
+    padding: 5px;
+    text-shadow: 2px 2px 0px black;
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
